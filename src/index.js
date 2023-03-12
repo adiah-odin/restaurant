@@ -1,5 +1,7 @@
 import "./sass/style.scss";
 
+import pageLoad from "./pageLoad.js";
+
 const navLinks = [
   {
     name: "home",
@@ -112,9 +114,21 @@ function content() {
     navItem.appendChild(navLink);
   });
 
+  // Where the page specific code goes:
+  const pageContent = document.createElement("main");
+  pageContent.id = "pageContent";
+  wrapper.appendChild(pageContent);
+
   return wrapper;
 }
 
 document.body.appendChild(content());
 
+// Once the page loads, add the home page to pageContent
+
+// A function to change the contents of pageContent
+
 console.log("Hello to me");
+
+// document.addEventListener("DOMContentLoaded", pageLoad("home"));
+document.addEventListener("load", pageLoad("home"));
