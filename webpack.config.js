@@ -5,6 +5,7 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./src/index.js",
+    home: "./src/home.js",
   },
   devtool: "inline-source-map",
   devServer: {
@@ -31,6 +32,14 @@ module.exports = {
       },
       {
         test: /\.(woff|woff2|ttf|eot|otf)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
         type: "asset/resource",
       },
     ],
