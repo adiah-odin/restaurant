@@ -1,7 +1,11 @@
+import about from "./about.js";
 import home from "./home.js";
+import menu from "./menu.js";
 
 const pages = {
+  about,
   home,
+  menu,
 };
 
 export default function pageLoad(page) {

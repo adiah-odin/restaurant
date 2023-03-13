@@ -89,6 +89,11 @@ function content() {
     navLink.setAttribute("href", "#");
 
     navItem.appendChild(navLink);
+
+    navItem.onclick = (event) => {
+      event.preventDefault();
+      pageLoad(link.name);
+    };
   });
 
   const desktopNav = document.createElement("nav");
@@ -112,11 +117,17 @@ function content() {
     navLink.setAttribute("href", "#");
 
     navItem.appendChild(navLink);
+
+    navItem.onclick = (event) => {
+      event.preventDefault();
+      pageLoad(link.name);
+    };
   });
 
   // Where the page specific code goes:
   const pageContent = document.createElement("main");
   pageContent.id = "pageContent";
+  pageContent.classList.add("page-content");
   wrapper.appendChild(pageContent);
 
   return wrapper;
