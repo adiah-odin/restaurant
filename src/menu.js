@@ -45,6 +45,7 @@ export default function menu() {
   pageSection.appendChild(sectionTitle);
 
   const sectionSubtitle = document.createElement("h2");
+  sectionSubtitle.className = "menu__subtitle";
   sectionSubtitle.textContent = "Delicious Norse Food";
 
   pageSection.appendChild(sectionSubtitle);

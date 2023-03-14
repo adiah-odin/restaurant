@@ -5,8 +5,31 @@
   flex-direction: column;
   align-items: center;
 
-  //   width: 80%;
+  @include abs.breakpoint(medium) {
+    text-align: center;
+  }
 
-  //   h1 {
-  //   }
+  &__title {
+    // margin-top: 1.5rem;
+    margin-block: 1.5rem;
+    font-family: var(--ff-cursive);
+    font-size: var(--fs-600);
+  }
+
+  &__subtitle {
+    display: none;
+  }
+
+  &__wrapper {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+
+    @include abs.breakpoint(medium) {
+      list-style: none;
+    }
+  }
 }
